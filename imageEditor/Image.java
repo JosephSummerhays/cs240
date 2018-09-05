@@ -1,16 +1,19 @@
 import java.io.*;
+import java.util.*;
 
 public class Image {
 	public static void main (String Args[]) throws IOException {
 		FileInputStream in = null;
+		Scanner input = null;
 		FileOutputStream out = null;
 		
 		try {
-			inStream = new FileInputStream(Args[0]);
-			Reader in = new InputStreamReader(inStream);
-			String c;
-			while ((c = in.read()) != -1) {
-				System.out.println(c);
+			in = new FileInputStream(Args[0]);
+			input = new Scanner(in);
+			System.out.println(input.nextLine());
+			System.out.println(input.nextLine());
+			while (input.hasNextInt()) {
+				System.out.println(input.nextInt());
 			}
 			
 			out = new FileOutputStream(Args[1]);
