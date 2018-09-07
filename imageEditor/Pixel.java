@@ -1,7 +1,13 @@
 
 
 public class Pixel {
-	public static void main(String[] args) {
-		System.out.println("Hello, World!");
+	private int Rval;
+	private int Gval;
+	private int Bval;
+	public Pixel (int Rval, int Gval, int Bval) {
+		this.Rval = Rval;
+		this.Gval = Gval;
+		this.Bval = Bval;
 	}
+	
 }
